@@ -88,13 +88,30 @@ int Date::getMonth() const{
     return month;
 }
 
-void Date::setDay(int day)
-{
+void Date::setDay(int day){
     if (day >= 1 && day <= monthDays())
         this->day = day;
 }
 
-int Date::getDay() const
-{
+int Date::getDay() const{
     return day;
+}
+
+ostream& operator<<(ostream& os, const Date& t)
+{
+    os << t.day / 10 << t.day % 10 << "."
+        << t.month / 10 << t.month % 10 << "."
+        << t.year;
+
+    return os;
+}
+
+istream& operator>>(istream& is, Date& t)
+{
+    do   {
+        cout << "dd mm yyyy: ";
+        is >> t.day >> t.month >> t.year;
+    } while (!t.valid());
+
+    return is;
 }

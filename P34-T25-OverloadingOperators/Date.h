@@ -27,5 +27,10 @@ public:
 	void setDay(int day);
 	int getDay()const;
 
+
+	//--------- ОПЕРАТОРИ виведення та введення
+	friend ostream& operator << (ostream& os, const Date& t);
+	friend istream& operator >> (istream& is, Date& t);
+
 };
 

@@ -1,6 +1,7 @@
-#include <iostream>
+#include "Date.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Date d1;
+    cout << d1 << endl;
 }
