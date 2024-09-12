@@ -32,5 +32,13 @@ public:
 	friend ostream& operator << (ostream& os, const Date& t);
 	friend istream& operator >> (istream& is, Date& t);
 
+
+	//--------- ОПЕРАТОРИ ІНКРЕМЕНТУ ТА ДЕКРЕМЕНТУ ---------
+	Date& operator --(); // Префіксна форма декременту
+	Date operator --(int); // Постфіксна форма декременту
+	Date& operator ++ (); // Префіксна форма інкременту
+	Date operator ++ (int); // Постфіксна форма інкременту
+
+
 };
 

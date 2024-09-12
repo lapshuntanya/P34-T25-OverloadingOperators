@@ -97,6 +97,28 @@ int Date::getDay() const{
     return day;
 }
 
+Date& Date::operator--(){
+    this->prevDate();
+    return *this;
+}
+
+Date Date::operator--(int){
+    Date tmp = *this;
+    this->prevDate();
+    return tmp;
+}
+
+Date& Date::operator++(){
+    this->nextDate();
+    return *this;
+}
+
+Date Date::operator++(int){
+    Date tmp = *this;
+    this->nextDate();
+    return tmp;
+}
+
 ostream& operator<<(ostream& os, const Date& t)
 {
     os << t.day / 10 << t.day % 10 << "."
