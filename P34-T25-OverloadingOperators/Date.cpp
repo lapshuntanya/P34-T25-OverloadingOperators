@@ -152,6 +152,32 @@ bool Date::operator<=(const Date& obj) const&{
     return (*this < obj) || *this == obj;
 }
 
+Date& Date::operator+=(int days){
+    for (int i = 0; i < days; i++) {
+       // ++(*this);
+        this->nextDate();
+    }
+    return *this;
+}
+
+Date& Date::operator-=(int days){
+    for (int i = 0; i < days; i++) {
+        // --(*this);
+        this->prevDate();
+    }
+    return *this;    
+}
+
+Date& Date::operator+=(double years){
+    this->year += years;
+    return *this;
+}
+
+Date& Date::operator-=(double years){
+    this->year += years;
+    return *this;
+}
+
 ostream& operator<<(ostream& os, const Date& t)
 {
     os << t.day / 10 << t.day % 10 << "."

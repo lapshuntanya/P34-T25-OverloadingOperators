@@ -19,4 +19,7 @@ int main()
     cout << d2 << " < " << d3 << (d2 <  d3 ? " true" : " false") << endl;
     cout << d2 << " >= " << d3 << (d2 >=  d3 ? " true" : " false") << endl;
     cout << d2 << " <= " << d3 << (d2 <=  d3 ? " true" : " false") << endl;
+    cout << "=====================================\n\n";
+
+
 }

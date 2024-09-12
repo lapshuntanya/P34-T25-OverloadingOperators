@@ -47,5 +47,13 @@ public:
 	bool operator >= (const Date& obj)const&;
 	bool operator <= (const Date& obj)const&;
 
+
+	//--------- ОПЕРАТОРИ ПРИСВОЄННЯ ---------	
+	Date& operator += (int days); // додати days днів до дати
+	Date& operator -= (int days); // відняти days дні від дати
+	Date& operator += (double years); // додати years років до дати
+	Date& operator -= (double years); // відняти years років від дати
+
+
 };
 
