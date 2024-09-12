@@ -119,6 +119,39 @@ Date Date::operator++(int){
     return tmp;
 }
 
+bool Date::operator==(const Date& obj) const&
+{
+    return year == obj.year && month == obj.month && day == obj.day;
+}
+
+bool Date::operator!=(const Date& obj) const&
+{
+    //return year != obj.year || month != obj.month || day != obj.day;
+    return !(*this == obj);
+}
+
+bool Date::operator>(const Date& obj) const&
+{
+    if (year > obj.year) return true;
+    else  if (year == obj.year && month > obj.month) return true;
+    else  if (year == obj.year && month == obj.month &&
+        day > obj.day) return true;
+
+    return false;
+}
+
+bool Date::operator<(const Date& obj) const&{
+    return !(*this> obj) && *this != obj;
+}
+
+bool Date::operator>=(const Date& obj) const&{
+    return (*this > obj) || * this == obj;
+}
+
+bool Date::operator<=(const Date& obj) const&{
+    return (*this < obj) || *this == obj;
+}
+
 ostream& operator<<(ostream& os, const Date& t)
 {
     os << t.day / 10 << t.day % 10 << "."

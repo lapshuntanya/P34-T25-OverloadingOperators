@@ -39,6 +39,13 @@ public:
 	Date& operator ++ (); // Префіксна форма інкременту
 	Date operator ++ (int); // Постфіксна форма інкременту
 
+	//--------- ОПЕРАТОРИ ПОРІВНЯННЯ ---------
+	bool operator == (const Date& obj)const&;
+	bool operator != (const Date& obj)const&;
+	bool operator > (const Date& obj)const&;
+	bool operator < (const Date& obj)const&;
+	bool operator >= (const Date& obj)const&;
+	bool operator <= (const Date& obj)const&;
 
 };
 
