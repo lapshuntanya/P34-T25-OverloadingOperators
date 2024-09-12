@@ -41,5 +41,10 @@ int main()
     cout << "=====================================\n\n";
 
 
+    cout << d2 + 5 << " == " << 5 + d2 << endl; // add days
+    cout << d2 - 5 << " == " << 5 - d2 << endl;
+
+    cout << d3 + 5.0 << " == " << 5.0 + d3 << endl; // add years
+    cout << d3 - 5.0 << " == " << 5.0 - d3 << endl;
 
 }
