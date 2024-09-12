@@ -54,6 +54,16 @@ void Date::nextDate()
 
 void Date::prevDate()
 {
+    if (day == 1 && month == 1) {
+        day = 31;
+        month = 12;
+        year--;
+    }
+    else if (day == 1) {
+        month--;
+        day = monthDays();
+    }
+    else day--;
 }
 
 bool Date::valid() const
