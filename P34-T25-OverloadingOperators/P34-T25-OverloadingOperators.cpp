@@ -11,5 +11,12 @@ int main()
     --d2;     //d2.prevDate();
     d3++;     //d3.nextDate();
     cout << d1 << " " << d2 << " " << d3 << endl << endl;
+    cout << "=====================================\n\n";
 
+    cout << d2 << " == " << d3 << (d2 == d3 ? " true" : " false") << endl;
+    cout << d2 << " != " << d3 << (d2 != d3 ? " true" : " false") << endl;
+    cout << d2 << " > " << d3 << (d2 > d3 ? " true" : " false") << endl;
+    cout << d2 << " < " << d3 << (d2 <  d3 ? " true" : " false") << endl;
+    cout << d2 << " >= " << d3 << (d2 >=  d3 ? " true" : " false") << endl;
+    cout << d2 << " <= " << d3 << (d2 <=  d3 ? " true" : " false") << endl;
 }

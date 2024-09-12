@@ -134,8 +134,8 @@ bool Date::operator>(const Date& obj) const&
 {
     if (year > obj.year) return true;
     else  if (year == obj.year && month > obj.month) return true;
-    else  if (year == obj.year && month == obj.month &&
-        day > obj.day) return true;
+    else  if (year == obj.year && month == obj.month &&  day > obj.day) 
+        return true;
 
     return false;
 }
