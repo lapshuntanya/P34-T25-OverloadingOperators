@@ -221,22 +221,18 @@ istream& operator>>(istream& is, Date& t)
     return is;
 }
 
-Date operator+(int days, const Date& a)
-{
-    return Date();
+Date operator+(int days, const Date& a){
+    return a + days;
 }
 
-Date operator-(int days, const Date& a)
-{
-    return Date();
+Date operator-(int days, const Date& a){
+    return a - days;
 }
 
-Date operator+(double years, const Date& a)
-{
-    return Date();
+Date operator+(double years, const Date& a){
+    return a + years;
 }
 
-Date operator-(double years, const Date& a)
-{
-    return Date();
+Date operator-(double years, const Date& a){
+    return a - years;
 }
