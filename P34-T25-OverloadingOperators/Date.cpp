@@ -38,6 +38,18 @@ int Date::monthDays() const
 
 void Date::nextDate()
 {
+    if (month == 12 && day == 31) {
+        day = 1;
+        month = 1;
+        year++;
+    }
+    else if (day == monthDays()) {
+        day = 1;
+        month++;
+    }
+    else {
+        day++;
+    }
 }
 
 void Date::prevDate()
