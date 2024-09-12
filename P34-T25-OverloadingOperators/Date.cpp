@@ -174,8 +174,32 @@ Date& Date::operator+=(double years){
 }
 
 Date& Date::operator-=(double years){
-    this->year += years;
+    this->year -= years;
     return *this;
+}
+
+Date Date::operator+(int days) const&{
+    Date tmp = *this;
+    tmp += days;
+    return tmp;
+}
+
+Date Date::operator-(int days) const&{
+    Date tmp = *this;
+    tmp -= days;
+    return tmp;
+}
+
+Date Date::operator+(double years) const&{
+    Date tmp = *this;
+    tmp += years;
+    return tmp;
+}
+
+Date Date::operator-(double years) const&{
+    Date tmp = *this;
+    tmp -= years;
+    return tmp;
 }
 
 ostream& operator<<(ostream& os, const Date& t)
@@ -195,4 +219,24 @@ istream& operator>>(istream& is, Date& t)
     } while (!t.valid());
 
     return is;
+}
+
+Date operator+(int days, const Date& a)
+{
+    return Date();
+}
+
+Date operator-(int days, const Date& a)
+{
+    return Date();
+}
+
+Date operator+(double years, const Date& a)
+{
+    return Date();
+}
+
+Date operator-(double years, const Date& a)
+{
+    return Date();
 }

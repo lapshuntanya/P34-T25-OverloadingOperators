@@ -55,5 +55,16 @@ public:
 	Date& operator -= (double years); // відняти years років від дати
 
 
+	//--------- АРИФМЕТИЧНІ ОПЕРАТОРИ ---------
+	Date operator + (int days)const&;
+	Date operator - (int days)const&;
+	friend Date operator + (int days, const Date& a);
+	friend Date operator - (int days, const Date& a);
+
+	Date operator + (double years)const&;
+	Date operator - (double years)const&;
+	friend Date operator + (double years, const Date& a);
+	friend Date operator - (double years, const Date& a);
+
 };
 
